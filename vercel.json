@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "env": {
+  },
+  "builds": [
+    {
+      "src": "app/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "ui/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "__comment": "Estas son las rutas usadas en express, yo hice una 'api' ",
+      "src": "/api/(.*)",
+      "dest": "app/index.js"
+    },
+    {
+      "__comment": "Rutas estaticas con las que puedes mandar tus archivos html",
+      "src": "/",
+      "dest": "ui/index.html"
+    },
+    {
+      "__comment": "esto es para los archivos estaticos ya sea imagenes, archivos css entre otros",
+      "src": "/(.+)",
+      "dest": "ui/$1"
+    }
+  ]
+}
