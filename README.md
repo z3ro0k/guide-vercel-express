@@ -4,6 +4,8 @@ Vercel Express y UI Webapp ejemplo.
 
 Demo - https://exprets.vercel.app/
 
+- Primero clone el repositorio en un directorio local. Configure la línea de comando de vercel y ejecute el comando "vercel" para implementar el proyecto:
+
 ### Configurar e implementar con Vercel
 
 ```
@@ -19,7 +21,7 @@ $ vercel
 
 ### [app/index.js](./app/index.js)
 
-- Si está utilizando TypeScript, cree su directorio de origen, salida a "app"
+- Si está usando TypeScript con node, cree su directorio de origen (usando una herramienta como la línea de comando "tsc" del paquete "typescript"), y envíe la salida a "app".
 - Actualización package.json: "main": "app/index.js"
 
 ### [vercel.json](./vercel.json)
@@ -28,3 +30,6 @@ $ vercel
 - Variables de entorno - ejemplos:
   - ```$ vercel secrets add my-mongodb-uri mongodb+srv://<user>:<password>@clusteridxxx.mongodb.net/<database-name>?retryWrites=true```
   - agregue "env" a vercel.json ```{" env ": {" MONGODB_URI ":" @ my-mongodb-uri "},...```
+
+¡Ahora tiene una aplicación web completa implementada en Internet usando Vercel!
+¡Feliz codificación!
